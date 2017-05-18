@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+       <include resource="org/springframework/boot/logging/logback/base.xml"/>
+       <logger name="demo.controller" level="WARN" additivity="false">
+              <appender-ref ref="CONSOLE"/>
+              <appender-ref ref="FILE"/>
+       </logger>
+       <!--<logger name="demo.config" level="WARN" additivity="false">
+              <appender-ref ref="CONSOLE"/>
+              <appender-ref ref="FILE"/>
+       </logger>-->
+       <!-- 不同环境不同的日志输出级别，可以指定java -jar spring-boot-sample     .jar - -spring.profiles.active=staging -->
+       <!--<springProfile name="dev">
+              <logger name="demo.controller" level="DEBUG" />
+       </springProfile>
+
+       <springProfile name="staging">
+              <logger name="demo.controller" level="INFO" />
+       </springProfile>-->
+       <!--<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+              <encoder>
+                     <Pattern>.%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n</Pattern>
+              </encoder>
+              <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+                     <level>ERROR</level>
+              </filter>
+       </appender>
+       <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+              <File>web.log</File>
+              <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                     &lt;!&ndash; daily rollover &ndash;&gt;
+                     <FileNamePattern>rest-demo.%d{yyyy-MM-dd}.log</FileNamePattern>
+                     &lt;!&ndash; keep 30 days' worth of history &ndash;&gt;
+                     <maxHistory>30</maxHistory>
+              </rollingPolicy>
+              <encoder>
+                     <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+              </encoder>
+       </appender>-->
+</configuration>
