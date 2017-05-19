@@ -5135,3 +5135,341 @@ Consider defining a bean of type 'com.springboot.mapper.StudentMapper' in your c
 2017-05-17 17:20:55.196  INFO 7088 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
 2017-05-17 17:20:55.448  INFO 7088 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
 2017-05-17 17:20:55.460  INFO 7088 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 9.163 seconds (JVM running for 9.721)
+2017-05-18 14:37:15.736  INFO 7020 --- [main] c.s.SpringBootSampleApplication          : Starting SpringBootSampleApplication on pipi-PC with PID 7020 (D:\spring-boot-sample\target\classes started by who in D:\spring-boot-sample)
+2017-05-18 14:37:15.742  INFO 7020 --- [main] c.s.SpringBootSampleApplication          : No active profile set, falling back to default profiles: default
+2017-05-18 14:37:15.882  INFO 7020 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e499fd0: startup date [Thu May 18 14:37:15 CST 2017]; root of context hierarchy
+2017-05-18 14:37:17.911  INFO 7020 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-05-18 14:37:19.382  INFO 7020 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-18 14:37:19.402  INFO 7020 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-18 14:37:19.404  INFO 7020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-18 14:37:19.941  INFO 7020 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-18 14:37:19.949  INFO 7020 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-18 14:37:19.949  INFO 7020 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4071 ms
+2017-05-18 14:37:20.272  INFO 7020 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-18 14:37:20.279  INFO 7020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-18 14:37:20.281  INFO 7020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-18 14:37:20.282  INFO 7020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-18 14:37:20.282  INFO 7020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-18 14:37:21.630  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4e499fd0: startup date [Thu May 18 14:37:15 CST 2017]; root of context hierarchy
+2017-05-18 14:37:21.739  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.controller.HelloBoot.hello()
+2017-05-18 14:37:21.740  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.springboot.controller.LogController.helloLog()
+2017-05-18 14:37:21.741  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index]}" onto public java.lang.String com.springboot.controller.PageController.index(org.springframework.ui.Model)
+2017-05-18 14:37:21.741  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page1]}" onto public java.lang.String com.springboot.controller.PageController.page1(org.springframework.ui.Model)
+2017-05-18 14:37:21.744  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/add]}" onto public java.lang.String com.springboot.controller.StudentController.insert()
+2017-05-18 14:37:21.745  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_name]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getByName()
+2017-05-18 14:37:21.745  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_id]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getById()
+2017-05-18 14:37:21.745  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get]}" onto public java.util.List<com.springboot.entity.Student> com.springboot.controller.StudentController.getAll()
+2017-05-18 14:37:21.751  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-18 14:37:21.751  INFO 7020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-18 14:37:21.813  INFO 7020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:37:21.813  INFO 7020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:37:21.912  INFO 7020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:37:23.509  INFO 7020 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-18 14:37:23.521  INFO 7020 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-18 14:37:23.690  INFO 7020 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-18 14:37:23.699  INFO 7020 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 8.696 seconds (JVM running for 9.259)
+2017-05-18 14:37:28.536  INFO 7020 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-18 14:37:28.537  INFO 7020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-18 14:37:28.563  INFO 7020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-05-18 14:39:02.381  INFO 452 --- [main] c.s.SpringBootSampleApplication          : Starting SpringBootSampleApplication on pipi-PC with PID 452 (D:\spring-boot-sample\target\classes started by who in D:\spring-boot-sample)
+2017-05-18 14:39:02.386  INFO 452 --- [main] c.s.SpringBootSampleApplication          : No active profile set, falling back to default profiles: default
+2017-05-18 14:39:02.676  INFO 452 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32e7c4ef: startup date [Thu May 18 14:39:02 CST 2017]; root of context hierarchy
+2017-05-18 14:39:04.438  INFO 452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-05-18 14:39:05.726  INFO 452 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-18 14:39:05.743  INFO 452 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-18 14:39:05.744  INFO 452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-18 14:39:06.322  INFO 452 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-18 14:39:06.334  INFO 452 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-18 14:39:06.334  INFO 452 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3662 ms
+2017-05-18 14:39:06.626  INFO 452 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-18 14:39:06.633  INFO 452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-18 14:39:06.634  INFO 452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-18 14:39:06.634  INFO 452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-18 14:39:06.634  INFO 452 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-18 14:39:07.958  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32e7c4ef: startup date [Thu May 18 14:39:02 CST 2017]; root of context hierarchy
+2017-05-18 14:39:08.087  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.controller.HelloBoot.hello()
+2017-05-18 14:39:08.089  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.springboot.controller.LogController.helloLog()
+2017-05-18 14:39:08.091  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index]}" onto public java.lang.String com.springboot.controller.PageController.index(org.springframework.ui.Model)
+2017-05-18 14:39:08.091  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page1]}" onto public java.lang.String com.springboot.controller.PageController.page1(org.springframework.ui.Model)
+2017-05-18 14:39:08.095  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/add]}" onto public java.lang.String com.springboot.controller.StudentController.insert()
+2017-05-18 14:39:08.096  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_name]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getByName()
+2017-05-18 14:39:08.097  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get]}" onto public java.util.List<com.springboot.entity.Student> com.springboot.controller.StudentController.getAll()
+2017-05-18 14:39:08.097  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_id]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getById()
+2017-05-18 14:39:08.102  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-18 14:39:08.103  INFO 452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-18 14:39:08.190  INFO 452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:39:08.190  INFO 452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:39:08.319  INFO 452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:39:09.912  INFO 452 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-18 14:39:09.928  INFO 452 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-18 14:39:10.031  INFO 452 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-18 14:39:10.041  INFO 452 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 8.385 seconds (JVM running for 8.913)
+2017-05-18 14:39:16.023  INFO 452 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-18 14:39:16.023  INFO 452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-18 14:39:16.045  INFO 452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-05-18 14:41:49.709  INFO 8876 --- [main] c.s.SpringBootSampleApplication          : Starting SpringBootSampleApplication on pipi-PC with PID 8876 (D:\spring-boot-sample\target\classes started by who in D:\spring-boot-sample)
+2017-05-18 14:41:49.713  INFO 8876 --- [main] c.s.SpringBootSampleApplication          : No active profile set, falling back to default profiles: default
+2017-05-18 14:41:49.832  INFO 8876 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5324e236: startup date [Thu May 18 14:41:49 CST 2017]; root of context hierarchy
+2017-05-18 14:41:51.299  INFO 8876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-05-18 14:41:52.626  INFO 8876 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-18 14:41:52.647  INFO 8876 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-18 14:41:52.650  INFO 8876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-18 14:41:53.223  INFO 8876 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-18 14:41:53.230  INFO 8876 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-18 14:41:53.231  INFO 8876 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3403 ms
+2017-05-18 14:41:53.584  INFO 8876 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-18 14:41:53.591  INFO 8876 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-18 14:41:53.592  INFO 8876 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-18 14:41:53.593  INFO 8876 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-18 14:41:53.593  INFO 8876 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-18 14:41:55.019  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5324e236: startup date [Thu May 18 14:41:49 CST 2017]; root of context hierarchy
+2017-05-18 14:41:55.127  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.controller.HelloBoot.hello()
+2017-05-18 14:41:55.129  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.springboot.controller.LogController.helloLog()
+2017-05-18 14:41:55.130  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index]}" onto public java.lang.String com.springboot.controller.PageController.index(org.springframework.ui.Model)
+2017-05-18 14:41:55.130  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page1]}" onto public java.lang.String com.springboot.controller.PageController.page1(org.springframework.ui.Model)
+2017-05-18 14:41:55.135  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/add]}" onto public java.lang.String com.springboot.controller.StudentController.insert()
+2017-05-18 14:41:55.135  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_name]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getByName()
+2017-05-18 14:41:55.136  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_id]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getById()
+2017-05-18 14:41:55.136  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get]}" onto public java.util.List<com.springboot.entity.Student> com.springboot.controller.StudentController.getAll()
+2017-05-18 14:41:55.141  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-18 14:41:55.142  INFO 8876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-18 14:41:55.214  INFO 8876 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:41:55.214  INFO 8876 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:41:55.330  INFO 8876 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:41:57.042  INFO 8876 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-18 14:41:57.059  INFO 8876 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-18 14:41:57.240  INFO 8876 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-18 14:41:57.251  INFO 8876 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 8.56 seconds (JVM running for 9.178)
+2017-05-18 14:42:02.923  INFO 8876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-18 14:42:02.923  INFO 8876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-18 14:42:02.945  INFO 8876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-05-18 14:42:30.484  INFO 8876 --- [http-nio-8080-exec-10] com.springboot.controller.LogController  : this is a info message
+2017-05-18 14:42:30.485 ERROR 8876 --- [http-nio-8080-exec-10] com.springboot.controller.LogController  : this is a error message
+2017-05-18 14:42:30.485  WARN 8876 --- [http-nio-8080-exec-10] com.springboot.controller.LogController  : this is a warn message
+2017-05-18 14:48:15.625  INFO 8072 --- [main] c.s.SpringBootSampleApplication          : Starting SpringBootSampleApplication on pipi-PC with PID 8072 (D:\spring-boot-sample\target\classes started by who in D:\spring-boot-sample)
+2017-05-18 14:48:15.631  INFO 8072 --- [main] c.s.SpringBootSampleApplication          : No active profile set, falling back to default profiles: default
+2017-05-18 14:48:15.769  INFO 8072 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@236e2c09: startup date [Thu May 18 14:48:15 CST 2017]; root of context hierarchy
+2017-05-18 14:48:17.565  INFO 8072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-05-18 14:48:18.901  INFO 8072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-18 14:48:18.919  INFO 8072 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-18 14:48:18.921  INFO 8072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-18 14:48:19.490  INFO 8072 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-18 14:48:19.498  INFO 8072 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-18 14:48:19.499  INFO 8072 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3734 ms
+2017-05-18 14:48:19.778  INFO 8072 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-18 14:48:19.786  INFO 8072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-18 14:48:19.786  INFO 8072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-18 14:48:19.787  INFO 8072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-18 14:48:19.787  INFO 8072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-18 14:48:21.148  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@236e2c09: startup date [Thu May 18 14:48:15 CST 2017]; root of context hierarchy
+2017-05-18 14:48:21.283  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.controller.HelloBoot.hello()
+2017-05-18 14:48:21.286  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.springboot.controller.LogController.helloLog()
+2017-05-18 14:48:21.287  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index]}" onto public java.lang.String com.springboot.controller.PageController.index(org.springframework.ui.Model)
+2017-05-18 14:48:21.288  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page1]}" onto public java.lang.String com.springboot.controller.PageController.page1(org.springframework.ui.Model)
+2017-05-18 14:48:21.293  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/delete]}" onto public java.lang.String com.springboot.controller.StudentController.delete()
+2017-05-18 14:48:21.294  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/add]}" onto public java.lang.String com.springboot.controller.StudentController.insert()
+2017-05-18 14:48:21.294  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_name]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getByName()
+2017-05-18 14:48:21.295  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get]}" onto public java.util.List<com.springboot.entity.Student> com.springboot.controller.StudentController.getAll()
+2017-05-18 14:48:21.295  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_id]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getById()
+2017-05-18 14:48:21.300  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-18 14:48:21.300  INFO 8072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-18 14:48:21.380  INFO 8072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:48:21.380  INFO 8072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:48:21.492  INFO 8072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 14:48:23.198  INFO 8072 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-18 14:48:23.218  INFO 8072 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-18 14:48:23.374  INFO 8072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-18 14:48:23.384  INFO 8072 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 8.604 seconds (JVM running for 9.137)
+2017-05-18 14:48:36.653  INFO 8072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-18 14:48:36.653  INFO 8072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-18 14:48:36.677  INFO 8072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2017-05-18 17:14:25.497  INFO 3984 --- [main] c.s.SpringBootSampleApplication          : Starting SpringBootSampleApplication on pipi-PC with PID 3984 (D:\spring-boot-sample\target\classes started by who in D:\spring-boot-sample)
+2017-05-18 17:14:25.502  INFO 3984 --- [main] c.s.SpringBootSampleApplication          : No active profile set, falling back to default profiles: default
+2017-05-18 17:14:25.709  INFO 3984 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327a051d: startup date [Thu May 18 17:14:25 CST 2017]; root of context hierarchy
+2017-05-18 17:14:27.482  INFO 3984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-05-18 17:14:29.081  INFO 3984 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-18 17:14:29.099  INFO 3984 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-18 17:14:29.100  INFO 3984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-18 17:14:29.676  INFO 3984 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-18 17:14:29.684  INFO 3984 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-18 17:14:29.685  INFO 3984 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3980 ms
+2017-05-18 17:14:30.013  INFO 3984 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-18 17:14:30.018  INFO 3984 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-18 17:14:30.019  INFO 3984 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-18 17:14:30.019  INFO 3984 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-18 17:14:30.019  INFO 3984 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-18 17:14:31.577  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@327a051d: startup date [Thu May 18 17:14:25 CST 2017]; root of context hierarchy
+2017-05-18 17:14:31.712  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.controller.HelloBoot.hello()
+2017-05-18 17:14:31.714  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.springboot.controller.LogController.helloLog()
+2017-05-18 17:14:31.715  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index]}" onto public java.lang.String com.springboot.controller.PageController.index(org.springframework.ui.Model)
+2017-05-18 17:14:31.715  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page1]}" onto public java.lang.String com.springboot.controller.PageController.page1(org.springframework.ui.Model)
+2017-05-18 17:14:31.718  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/redis/set]}" onto public java.lang.String com.springboot.controller.RedisController.set()
+2017-05-18 17:14:31.723  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/delete]}" onto public java.lang.String com.springboot.controller.StudentController.delete()
+2017-05-18 17:14:31.723  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/add]}" onto public java.lang.String com.springboot.controller.StudentController.insert()
+2017-05-18 17:14:31.724  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_name]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getByName()
+2017-05-18 17:14:31.724  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get]}" onto public java.util.List<com.springboot.entity.Student> com.springboot.controller.StudentController.getAll()
+2017-05-18 17:14:31.725  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_id]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getById()
+2017-05-18 17:14:31.730  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-18 17:14:31.731  INFO 3984 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-18 17:14:31.837  INFO 3984 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 17:14:31.838  INFO 3984 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 17:14:31.965  INFO 3984 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-18 17:14:33.699  INFO 3984 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-18 17:14:33.714  INFO 3984 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-18 17:14:33.945  INFO 3984 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-18 17:14:33.953  INFO 3984 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 9.843 seconds (JVM running for 10.402)
+2017-05-18 17:15:01.731  INFO 3984 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-18 17:15:01.731  INFO 3984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-18 17:15:01.754  INFO 3984 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2017-05-18 17:16:14.235 ERROR 3984 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisConnectionFailureException: java.net.SocketException: Connection reset by peer: socket write error; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: java.net.SocketException: Connection reset by peer: socket write error] with root cause
+
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:113)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:159)
+	at redis.clients.util.RedisOutputStream.flushBuffer(RedisOutputStream.java:52)
+	at redis.clients.util.RedisOutputStream.flush(RedisOutputStream.java:216)
+	at redis.clients.jedis.Connection.flush(Connection.java:331)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:237)
+	at redis.clients.jedis.BinaryJedis.set(BinaryJedis.java:211)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.set(JedisConnection.java:1234)
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.set(DefaultStringRedisConnection.java:744)
+	at org.springframework.data.redis.core.DefaultValueOperations$10.inRedis(DefaultValueOperations.java:172)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:57)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:207)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:169)
+	at com.springboot.controller.RedisController.set(RedisController.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-05-19 13:49:19.416  INFO 9456 --- [main] c.s.SpringBootSampleApplication          : Starting SpringBootSampleApplication on pipi-PC with PID 9456 (D:\spring-boot-sample\target\classes started by who in D:\spring-boot-sample)
+2017-05-19 13:49:19.461  INFO 9456 --- [main] c.s.SpringBootSampleApplication          : No active profile set, falling back to default profiles: default
+2017-05-19 13:49:19.656  INFO 9456 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28aeea7f: startup date [Fri May 19 13:49:19 CST 2017]; root of context hierarchy
+2017-05-19 13:49:21.697  INFO 9456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-05-19 13:49:23.757  INFO 9456 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-19 13:49:23.817  INFO 9456 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-19 13:49:23.818  INFO 9456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-19 13:49:24.634  INFO 9456 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-19 13:49:24.647  INFO 9456 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-19 13:49:24.647  INFO 9456 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5003 ms
+2017-05-19 13:49:24.955  INFO 9456 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-19 13:49:24.981  INFO 9456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-19 13:49:24.981  INFO 9456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-19 13:49:24.982  INFO 9456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-19 13:49:24.982  INFO 9456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-19 13:49:27.121  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@28aeea7f: startup date [Fri May 19 13:49:19 CST 2017]; root of context hierarchy
+2017-05-19 13:49:27.273  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.controller.HelloBoot.hello()
+2017-05-19 13:49:27.276  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.springboot.controller.LogController.helloLog()
+2017-05-19 13:49:27.277  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index]}" onto public java.lang.String com.springboot.controller.PageController.index(org.springframework.ui.Model)
+2017-05-19 13:49:27.278  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page1]}" onto public java.lang.String com.springboot.controller.PageController.page1(org.springframework.ui.Model)
+2017-05-19 13:49:27.281  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/redis/set]}" onto public java.lang.String com.springboot.controller.RedisController.set()
+2017-05-19 13:49:27.286  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/delete]}" onto public java.lang.String com.springboot.controller.StudentController.delete()
+2017-05-19 13:49:27.286  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/add]}" onto public java.lang.String com.springboot.controller.StudentController.insert()
+2017-05-19 13:49:27.287  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_name]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getByName()
+2017-05-19 13:49:27.287  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get]}" onto public java.util.List<com.springboot.entity.Student> com.springboot.controller.StudentController.getAll()
+2017-05-19 13:49:27.288  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_id]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getById()
+2017-05-19 13:49:27.294  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-19 13:49:27.295  INFO 9456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-19 13:49:27.448  INFO 9456 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-19 13:49:27.449  INFO 9456 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-19 13:49:27.580  INFO 9456 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-19 13:49:29.513  INFO 9456 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-19 13:49:29.533  INFO 9456 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-19 13:49:29.705  INFO 9456 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-19 13:49:29.716  INFO 9456 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 12.192 seconds (JVM running for 13.261)
+2017-05-19 13:49:39.146  INFO 9456 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-19 13:49:39.147  INFO 9456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-19 13:49:39.179  INFO 9456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-05-19 16:30:01.506  INFO 9976 --- [main] c.s.SpringBootSampleApplication          : Starting SpringBootSampleApplication on pipi-PC with PID 9976 (D:\spring-boot-sample\target\classes started by who in D:\spring-boot-sample)
+2017-05-19 16:30:01.511  INFO 9976 --- [main] c.s.SpringBootSampleApplication          : No active profile set, falling back to default profiles: default
+2017-05-19 16:30:01.737  INFO 9976 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@595660c3: startup date [Fri May 19 16:30:01 CST 2017]; root of context hierarchy
+2017-05-19 16:30:03.077  INFO 9976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-05-19 16:30:04.768  INFO 9976 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-19 16:30:04.822  INFO 9976 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-19 16:30:04.824  INFO 9976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.14
+2017-05-19 16:30:05.352  INFO 9976 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-05-19 16:30:05.360  INFO 9976 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-19 16:30:05.361  INFO 9976 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3629 ms
+2017-05-19 16:30:05.657  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-19 16:30:05.665  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-19 16:30:05.666  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-19 16:30:05.666  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-19 16:30:05.666  INFO 9976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-19 16:30:07.349  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@595660c3: startup date [Fri May 19 16:30:01 CST 2017]; root of context hierarchy
+2017-05-19 16:30:07.480  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.springboot.controller.HelloBoot.hello()
+2017-05-19 16:30:07.482  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.springboot.controller.LogController.helloLog()
+2017-05-19 16:30:07.483  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ || /index]}" onto public java.lang.String com.springboot.controller.PageController.index(org.springframework.ui.Model)
+2017-05-19 16:30:07.483  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page1]}" onto public java.lang.String com.springboot.controller.PageController.page1(org.springframework.ui.Model)
+2017-05-19 16:30:07.487  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/redis/set]}" onto public java.lang.String com.springboot.controller.RedisController.set()
+2017-05-19 16:30:07.487  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/redis/getList]}" onto public java.util.List<java.lang.Integer> com.springboot.controller.RedisController.setString()
+2017-05-19 16:30:07.490  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/delete]}" onto public java.lang.String com.springboot.controller.StudentController.delete()
+2017-05-19 16:30:07.491  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/add]}" onto public java.lang.String com.springboot.controller.StudentController.insert()
+2017-05-19 16:30:07.491  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_name]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getByName()
+2017-05-19 16:30:07.491  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get]}" onto public java.util.List<com.springboot.entity.Student> com.springboot.controller.StudentController.getAll()
+2017-05-19 16:30:07.492  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/student/get_by_id]}" onto public com.springboot.entity.Student com.springboot.controller.StudentController.getById()
+2017-05-19 16:30:07.495  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-19 16:30:07.496  INFO 9976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-19 16:30:07.602  INFO 9976 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-19 16:30:07.602  INFO 9976 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-19 16:30:07.740  INFO 9976 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-19 16:30:09.485  INFO 9976 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-19 16:30:09.504  INFO 9976 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-05-19 16:30:09.660  INFO 9976 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-19 16:30:09.670  INFO 9976 --- [main] c.s.SpringBootSampleApplication          : Started SpringBootSampleApplication in 9.51 seconds (JVM running for 10.03)
+2017-05-19 16:30:29.605  INFO 9976 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-19 16:30:29.606  INFO 9976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-19 16:30:29.636  INFO 9976 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
