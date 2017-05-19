@@ -1,11 +1,10 @@
 package com.springboot.mapper;
 
 import com.springboot.entity.Student;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Delete;
 
 import java.util.List;
 
-@Mapper
 public interface StudentMapper {
 
     List<Student> getAll();
@@ -15,5 +14,11 @@ public interface StudentMapper {
     Student getById(Integer id);
 
     void insert(Student student);
+
+
+    //使用MyBatis注解形式操作数据库
+    @Delete("DELETE FROM student WHERE id = #{id}")
+    void delete(Integer id);
+
 
 }

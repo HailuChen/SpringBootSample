@@ -38,4 +38,11 @@ public class StudentController {
         studentMapper.insert(student);
         return "OK";
     }
+
+    @RequestMapping("/delete")
+    public String delete() {
+        Student student = studentMapper.getById(4);
+        if (student != null) studentMapper.delete(4);
+        return "OK";
+    }
 }
